@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#171717">
+  <title>G-AI — مساعدك الذكي</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand-row">
+        <div class="brand-mark">G</div>
+        <span class="brand-name">G-AI</span>
+        <button class="icon-btn close-sidebar" id="closeSidebar" aria-label="إغلاق القائمة">×</button>
+      </div>
+      <button class="new-chat" id="newChat"><span>＋</span> محادثة جديدة</button>
+      <div class="history-title">المحادثات</div>
+      <div class="history-list" id="historyList"></div>
+      <div class="sidebar-bottom">
+        <div class="model-chip"><span class="status-dot"></span><span>مساعد G-AI</span><small>نسخة تجريبية</small></div>
+        <div class="sidebar-note">محادثاتك محفوظة على هذا الجهاز.</div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="icon-btn menu-btn" id="openSidebar" aria-label="فتح القائمة">☰</button>
+        <div class="mobile-brand"><span class="brand-mark small">G</span> G-AI</div>
+        <div class="topbar-label">مساعد الذكاء الاصطناعي</div>
+        <button class="icon-btn" id="clearChat" title="مسح المحادثة">⌫</button>
+      </header>
+
+      <section class="conversation" id="conversation">
+        <div class="welcome" id="welcome">
+          <div class="welcome-logo">G</div>
+          <h1>مرحباً بك في <span>G-AI</span></h1>
+          <p>ما الذي تريد أن نعمل عليه اليوم؟</p>
+          <div class="suggestions">
+            <button class="suggestion" data-prompt="اشرح لي الذكاء الاصطناعي بطريقة بسيطة">اشرح لي موضوعاً</button>
+            <button class="suggestion" data-prompt="ساعدني في كتابة فكرة مشروع">ساعدني في فكرة مشروع</button>
+            <button class="suggestion" data-prompt="اكتب لي كود HTML لصفحة بسيطة">اكتب لي كوداً</button>
+          </div>
+        </div>
+        <div class="messages" id="messages"></div>
+      </section>
+
+      <footer class="composer-area">
+        <form class="composer" id="chatForm">
+          <textarea id="promptInput" rows="1" placeholder="اكتب رسالتك إلى G-AI..." aria-label="رسالتك"></textarea>
+          <button class="send-btn" id="sendBtn" type="submit" aria-label="إرسال">↑</button>
+        </form>
+        <div class="disclaimer">قد يقدّم الذكاء الاصطناعي معلومات غير دقيقة. تحقق من المعلومات المهمة.</div>
+      </footer>
+    </main>
+  </div>
+  <div class="mobile-overlay" id="overlay"></div>
+  <script src="script.js"></script>
+</body>
+</html>
