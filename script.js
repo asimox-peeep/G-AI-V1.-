@@ -1,4 +1,4 @@
-const API_URL = "https://YOUR-WORKER-NAME.YOUR-SUBDOMAIN.workers.dev/api/chat";
+const API_URL = "https://g-ai-api.lahrechriad9.workers.dev/api/chat";
 const STORAGE_KEY = "gai_v1_chats";
 let chats = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
 let currentId = null;
